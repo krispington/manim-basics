@@ -1,8 +1,17 @@
 from manim import *
 
 class test(Scene):
-    #create a circle and animate it
     def construct(self):
-        circle = Circle()  # create a circle
-        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
-        self.play(Create(circle))  # show the circle on screen
+        #create
+        circle = Circle()
+        square = Square()
+        
+        text = Text("Meow Meow Meow", font_size=73)
+        text.to_edge(UP)
+        
+        self.add(circle)
+
+        self.play(
+            Write(text),
+            Transform(circle, square)
+        )
