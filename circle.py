@@ -1,6 +1,6 @@
 from manim import *
 
-class test(Scene):
+class Text(Scene):
     def construct(self):
         #create
         circle = Circle()
