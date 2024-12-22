@@ -1,4 +1,4 @@
-from manimgl import *
+from manimlib import *
 from scipy.integrate import solve_ivp
 
 
