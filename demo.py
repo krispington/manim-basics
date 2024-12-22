@@ -20,13 +20,6 @@ def ode_solution_points(function, state0, time, dt=0.01):
     return solution.y.T
 
 
-def for_later():
-    tail = VGroup(
-        TracingTail(dot, time_traced=3).match_color(dot)
-        for dot in dots
-    )
-
-
 class LorenzAttractor(InteractiveScene):
     def construct(self):
         # Set up axes
@@ -46,7 +39,7 @@ class LorenzAttractor(InteractiveScene):
         self.add(axes)
 
         # Add the equations
-        equations = Tex(
+        equations = Text(
             R"""
             \begin{aligned}
             \frac{\mathrm{d} x}{\mathrm{~d} t} & =\sigma(y-x) \\
@@ -109,7 +102,3 @@ class LorenzAttractor(InteractiveScene):
             ),
             run_time=evolution_time,
         )
-
-
-class EndScreen(PatreonEndScreen):
-    pass
